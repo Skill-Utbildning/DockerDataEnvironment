@@ -25,7 +25,7 @@ Select the `devcontainer.json` file, right-click and select the option:
 
 ![Select](img.png)
 
-This needs your git repo and the branch used to to build and creates a new image with your IDE-backend connected.
+This needs your git repo and the branch used to build and creates a new image with your IDE-backend connected.
 When this is up and running you can connect and it opens in a new IDE-window running in 
 your container. This might need a venv to be initiated from your requirements, 
 but your image is built with exactly those and should contain just what you need to initalize a new venv.
