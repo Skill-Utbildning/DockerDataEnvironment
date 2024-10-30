@@ -10,7 +10,7 @@ repo based on the same container and then expanded with the repo's own requireme
 
 or similar base image - **UPDATE Dockerfile accordingly** 
 
-`docker build -t "py-dev:dash_app_v1"`
+`docker build -t "py-dev:dash_app_v1" .`
 
 add/replace version numbers as needed after py-dev like: `py-dev:your_project_v*x*`
 
@@ -20,10 +20,10 @@ version.
 
 ### Step 3.
 Select the `devcontainer.json` file, right-click and select the option: 
-> Dev Containers > Create Dev Container and Clone Sources.
+> Dev Containers > Create Dev Container and Mount Sources.
 
+![img.png](img.png)
 
-![Select](img.png)
 
 This needs your git repo and the branch used to build and creates a new image with your IDE-backend connected.
 When this is up and running you can connect and it opens in a new IDE-window running in 
