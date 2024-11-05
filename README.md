@@ -10,7 +10,7 @@ repo based on the same container and then expanded with the repo's own requireme
 
 or similar base image - **UPDATE Dockerfile accordingly** 
 
-`docker build -t "py-dev:dash_app_v1" .`
+`docker build -t "py-dev:pandas_v2" .`
 
 add/replace version numbers as needed after py-dev like: `py-dev:your_project_v*x*`
 
@@ -25,10 +25,11 @@ Select the `devcontainer.json` file, right-click and select the option:
 ![img.png](img.png)
 
 
-This needs your git repo and the branch used to build and creates a new image with your IDE-backend connected.
 When this is up and running you can connect and it opens in a new IDE-window running in 
 your container. This might need a venv to be initiated from your requirements, 
 but your image is built with exactly those and should contain just what you need to initalize a new venv.
+The image you are running in are connected to your "normal" filesystem by mount and any changes made are duplicated 
+both ways. 
 
 ### Step 4. 
 Start your new container in your Services and Connect
@@ -36,4 +37,12 @@ Start your new container in your Services and Connect
 
 ### Step 5.
 A new window with PyCharm and your environment should open and this is now running in Docker.
-Develop, test and commit as needed. The environment should be connected to your upstream.
+Develop, test and run code as needed. Work your normal git flow from your "normal" filesystem/IDE/computer and 
+skip the hassle of setting up a connection to your upstream from the container.
+
+### Step 6.
+From Services > Docker > Dev Containers you can then load a previous image as a container. 
+Pycharm saves an image of your projects container loaded with your mounted code and your IDE, 
+so you don't have to upload again. Remember that each project should have it's own environment but 
+it's perfectly fine to copy the setup files from one to another.
+
